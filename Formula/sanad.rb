@@ -11,7 +11,7 @@ class Sanad < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.2/sanad_0.1.2_Darwin_x86_64.tar.gz"
-      sha256 "c75899085253be6bf9be9f2a3a3ad0f67898ec6e25ed9e5844d4429038fdd719"
+      sha256 "5336a36e18be025185d3b875f8e90b02274b3385516522be94be657bdce5df24"
 
       define_method(:install) do
         bin.install "sanad"
@@ -19,7 +19,7 @@ class Sanad < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.2/sanad_0.1.2_Darwin_arm64.tar.gz"
-      sha256 "b16d013f38a7183812e87a20a6caf0ba49f3378e76717fa25188f79221bc9d87"
+      sha256 "6c598c62a6e261ba8b25c0cc8385336d8920dc15894c6d6c1024007d8b5b7785"
 
       define_method(:install) do
         bin.install "sanad"
@@ -30,14 +30,14 @@ class Sanad < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.2/sanad_0.1.2_Linux_x86_64.tar.gz"
-      sha256 "8a802a6232e4802fe9b727fc53103cb0bd22d67291b140a95310c9c99f0635f7"
+      sha256 "3d269682e37d1465e0e04945379510df363b86856736495443d7c410d6cf13b7"
       define_method(:install) do
         bin.install "sanad"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.2/sanad_0.1.2_Linux_arm64.tar.gz"
-      sha256 "cbb625b2e22d813c15e1e0b7b307d1adc6c6a9913031f5ec390e103b080a9d72"
+      sha256 "d62ea50e3148602bd6371cbcaed389f191fd0a34bfec42f40fbd86683aa01374"
       define_method(:install) do
         bin.install "sanad"
       end
