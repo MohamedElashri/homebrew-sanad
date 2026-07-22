@@ -5,13 +5,13 @@
 class Sanad < Formula
   desc "Pin and update GitHub Actions dependencies to immutable commit SHAs"
   homepage "https://github.com/MohamedElashri/sanad"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.6/sanad_0.1.6_Darwin_x86_64.tar.gz"
-      sha256 "883d524b708a11cd8fbf58bb160a18bbe7ee191bbf853f36463b7f3c8c8ab6e8"
+      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.7/sanad_0.1.7_Darwin_x86_64.tar.gz"
+      sha256 "c4d3759a7c7b487c687a4f4233b6e5e52a112cb9f1cf1c3e93224031748fc193"
 
       define_method(:install) do
         bin.install "sanad"
@@ -19,8 +19,8 @@ class Sanad < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.6/sanad_0.1.6_Darwin_arm64.tar.gz"
-      sha256 "927c4eaae5a9520f16f0a03071eb9f7d08e991b20c8ea4e617f79a6ddb47e969"
+      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.7/sanad_0.1.7_Darwin_arm64.tar.gz"
+      sha256 "088301a6697955ec9e675c80dbc0d0e33e7fd49c63cd60204298b881e432cfd8"
 
       define_method(:install) do
         bin.install "sanad"
@@ -31,16 +31,16 @@ class Sanad < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.6/sanad_0.1.6_Linux_x86_64.tar.gz"
-      sha256 "44f6071b370ae789508b2f7896843a7bf905019f73ec944cc238b82fb94e2eef"
+      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.7/sanad_0.1.7_Linux_x86_64.tar.gz"
+      sha256 "1a46f4cde5b0fa4d683c6816878f0e3fca78f38ac541906fc9e83ce99845f43c"
       define_method(:install) do
         bin.install "sanad"
         generate_completions_from_executable(bin/"sanad", "completion", shells: [:bash, :zsh, :fish, :pwsh])
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.6/sanad_0.1.6_Linux_arm64.tar.gz"
-      sha256 "f9f605b215294cd5c0db2872b6dc46c249e4acd43df7a75f04dcca280aff0e86"
+      url "https://github.com/MohamedElashri/sanad/releases/download/v0.1.7/sanad_0.1.7_Linux_arm64.tar.gz"
+      sha256 "f67ea3166719936d2d30e479a19787e1c0c6fe47ae5091c1605f7f34f1dabc91"
       define_method(:install) do
         bin.install "sanad"
         generate_completions_from_executable(bin/"sanad", "completion", shells: [:bash, :zsh, :fish, :pwsh])
